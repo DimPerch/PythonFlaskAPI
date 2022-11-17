@@ -19,7 +19,7 @@ class Article(db.Model):
                 }
 
     def __repr__(self):
-        return f'Article {self.title} {self.text}'
+        return str(self.to_json())
 
     def __str__(self):
         return str(self.__repr__())

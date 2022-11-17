@@ -19,7 +19,7 @@ class Comment(db.Model):
                 }
 
     def __repr__(self):
-        return f'Comment {self.text}'
+        return str(self.to_json())
 
     def __str__(self):
         return self.__repr__()

@@ -1,7 +1,6 @@
 import requests
 import json
 
-
 URL = 'http://localhost:5000/api/v1.0/users'
 
 r = requests.post(URL, data={"first_name": "dimitry", "last_name": "perchatkin"})
@@ -30,7 +29,7 @@ r = requests.get(URL, data={"id": new_id})
 print(r.text)
 
 r = requests.put(URL, data={"id": new_id, "title": "PythonPlox", "text": "dimitry bad chelovek",
-                             "author_id": 67})
+                            "author_id": 67})
 print(r.text)
 
 r = requests.get(URL, data={"id": new_id})
@@ -54,7 +53,7 @@ r = requests.get(URL, data={"id": new_id})
 print(r.text)
 
 r = requests.put(URL, data={"id": 55, "article_id": 1, "author_id": 2,
-                             "text": "Good comment"})
+                            "text": "Good comment"})
 print(r.text)
 
 r = requests.get(URL, data={"id": new_id})
